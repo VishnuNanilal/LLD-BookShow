@@ -18,6 +18,10 @@ public class Viewer extends User{
     public boolean cancelTicket(Ticket ticket){
         if(tickets.contains(ticket)) {
             ticket.setTicketStatus(TicketStatus.CANCELLED);
+            for(Integer seatNumb: ticket.seatNumbs){
+                Seat seat = ticket.screen.seats.get(seatNumb);
+                seat.removeViewer(ticket.buyer);
+            }
             return true;
         }
         return false;

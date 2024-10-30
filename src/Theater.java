@@ -19,7 +19,7 @@ public class Theater
         seatToPriceMap.put(type, price);
     }
 
-    public boolean setSeatAsBooked(int screenNum, int seatNum){
+    public boolean setSeatAsBooked(Viewer buyer, int screenNum, int seatNum){
         try{
             Seat seat = screens.get(screenNum).seats.get(seatNum);
              if(seat.booked){
@@ -28,6 +28,7 @@ public class Theater
              }
 
              seat.booked=true;
+             seat.setBuyer(buyer);
              return true;
         }
         catch(IndexOutOfBoundsException iob){

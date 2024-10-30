@@ -14,7 +14,7 @@ public class Show {
     }
     public Ticket bookShow(Viewer buyer, Theater theater, int screenNum, List<Integer> seatNumbs, String time){
         for(Integer seatNum: seatNumbs) {
-            boolean successful = theater.setSeatAsBooked(screenNum, seatNum);
+            boolean successful = theater.setSeatAsBooked(buyer, screenNum, seatNum);
             if(!successful) {
                 return null;
             }

@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Ticket {
-    User buyer;
+    Viewer buyer;
     Theater theater;
     Screen screen;
     //showTime
@@ -9,7 +9,7 @@ public class Ticket {
     String time;
     TicketStatus status;
     int amount;
-    Ticket(User buyer, Theater theater, Screen screen, List<Integer> seatNumbs, String time){
+    Ticket(Viewer buyer, Theater theater, Screen screen, List<Integer> seatNumbs, String time){
         this.buyer=buyer;
         this.theater=theater;
 
