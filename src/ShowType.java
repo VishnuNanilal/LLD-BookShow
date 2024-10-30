@@ -11,6 +11,11 @@ public class ShowType
     float avgRating;
     int maxRating=BookShowApplication.maxRating;
 
+    ShowType(String name, Worker director, Worker producer){
+        this.name=name;
+        this.director=director;
+        this.producer=producer;
+    }
     public String toString(){
         return "TODO toString for ShowType";
     }

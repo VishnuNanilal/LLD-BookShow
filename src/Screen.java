@@ -9,7 +9,7 @@ public class Screen {
         this.seats=seats;
     }
 
-    public boolean setTicketToSeat(int i, Ticket ticket){
+    public boolean setOccupied(int i, Ticket ticket){
         try{
             seats.get(i).booked=true;
             return true;
