@@ -6,8 +6,9 @@ public class Ticket {
     Screen screen;
     //showTime
     List<Integer> seatNumbs;
+    String time;
     int amount;
-    Ticket(User buyer, Theater theater, Screen screen, List<Integer> seatNumbs){
+    Ticket(User buyer, Theater theater, Screen screen, List<Integer> seatNumbs, String time){
         this.buyer=buyer;
         this.theater=theater;
 

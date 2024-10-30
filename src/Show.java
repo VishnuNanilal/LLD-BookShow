@@ -1,5 +1,6 @@
 import javax.script.ScriptEngine;
 import java.util.List;
+import java.util.Timer;
 
 public class Show {
     ShowType show;
@@ -11,7 +12,7 @@ public class Show {
         this.theater=theater;
         this.screen=screen;
     }
-    public Ticket bookShow(Viewer buyer, ShowType show, Theater theater, int screenNum, List<Integer> seatNumbs){
+    public Ticket bookShow(Viewer buyer, Theater theater, int screenNum, List<Integer> seatNumbs, String time){
         for(Integer seatNum: seatNumbs) {
             boolean successful = theater.setSeatAsBooked(screenNum, seatNum);
             if(!successful) {
@@ -19,6 +20,6 @@ public class Show {
             }
         }
 
-        return new Ticket(buyer, theater, screen, seatNumbs);
+        return new Ticket(buyer, theater, screen, seatNumbs, time);
     }
 }

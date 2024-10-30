@@ -2,7 +2,7 @@ public class User
 {
     String name;
     String email;
-    String password;
+    String password; //will be protected later.
     Role role;
     User(String name, String email, String password, Role role){
         this.name=name;
